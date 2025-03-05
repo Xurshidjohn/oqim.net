@@ -1,0 +1,111 @@
+ /* Google Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Inter', sans-serif;
+ }
+ 
+ body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-color: #fff;
+ }
+ 
+ .container {
+     width: 400px;
+     text-align: center;
+ }
+ 
+ .logo img {
+     width: 50px;
+     margin-bottom: 20px;
+ }
+ 
+ .signup-box {
+     border: 1px solid #ddd;
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ h1 {
+     font-size: 24px;
+     font-weight: 700;
+     margin-bottom: 20px;
+ }
+ 
+ button {
+     width: 100%;
+     padding: 10px;
+     margin-top: 10px;
+     border-radius: 50px;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+ }
+ 
+ .google-btn {
+     background-color: #fff;
+     border: 1px solid #ddd;
+     color: #333;
+ }
+ 
+ .apple-btn {
+     background-color: #000;
+     color: #fff;
+     border: none;
+ }
+ 
+ .or {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 20px 0;
+ }
+ 
+ .or span {
+     flex: 1;
+     height: 1px;
+     background: #ddd;
+ }
+ 
+ .or p {
+     margin: 0 10px;
+     color: #666;
+ }
+ 
+ input {
+     width: 100%;
+     padding: 10px;
+     margin-top: 10px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     font-size: 16px;
+ }
+ 
+ .signup-btn {
+     background-color: #1DA1F2;
+     color: white;
+     border: none;
+ }
+ 
+ .terms, .login {
+     margin-top: 15px;
+     font-size: 14px;
+     color: #666;
+ }
+ 
+ .terms a, .login a {
+     color: #1DA1F2;
+     text-decoration: none;
+ }
+ 
+ .terms a:hover, .login a:hover {
+     text-decoration: underline;
+ }
+ 
