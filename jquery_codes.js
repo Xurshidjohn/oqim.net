@@ -34,6 +34,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="post-footer">
                                     <span class="icon"><img src="images/heart.svg" alt=""></span>
+                                    <span style='margin-top: 2px'>${element.post_like}</span>
                                     <span class="icon"><img src="images/message.svg" alt=""></span>
                                     <span class="icon"><img src="images/share.svg" alt=""></span>
                                 </div>

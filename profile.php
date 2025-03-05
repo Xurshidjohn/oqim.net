@@ -3,6 +3,13 @@
     <script type="text/javascript">window.location.href="login.php"</script>
     <?php
 }?>
+<?php include("bcnkddee333mnnqpd/UserModel.php");
+    $connect = new mysqli("localhost", "root", "", "oqim.net");
+    $user = new User($connect);
+    $user = $user->getUserByTokenWithOutJson($_COOKIE['__user_token__ssid']);
+    $user_name = $user['user_name'];
+    $user_bio = $user['user_bio'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,21 +40,49 @@
                     <div class="txt_cont_and_block">
                         <div class="texts_content">
                         <div class="name_content">
-                            <span>Xurshid</span>
+                            <span><?=$user_name?></span>
                         </div>
                         <div class="bio_content">
-                            Salom man odamman lekin buni hech kim bilmedi!
+                            <?=$user_bio?>
                         </div>
                         <div class="btn_group">
-                            <button class="button_ch_bio">change profile</button>
+                            <button id="change_profile_btn" class="button_ch_bio">change profile</button>
                             <button id="logout_button">logout</button>
                         </div>
                     </div>
                     </div>
             	</div>
+                <div id="edit_form"><br>
+                    <div class="st_section">
+                    <label for="">Username: </label>
+                    <input type="text" class="change_username_input"><br><br>
+                    <label for="">Sex:</label><br>
+                        <select name="" id="select_menu">
+                            <option value="male" default>Male</option>
+                            <option value="female">Female</option>
+                        </select><br><br>
+                        <button id="save_changes">save changes</button>
+                    </div>
+                    <div class="nd_section">
+                        <div class="bio-content">
+                        <p>Biography: </p><textarea class="textarea_bio_change" cols="45" rows="5" name="bio" id=""></textarea><br>
+                    </div>
+                </div>
+                    </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    $("#change_profile_btn").on('click', (e) => {
+        $("#edit_form").css('display', 'flex');
+    })
+
+    $("#save_changes").on('click', (e) => {
+        setTimeout(() => {
+            $("#edit_form").css('display', 'none');
+        }, 0);
+    })
+</script>
 <script src="js_files2232/profile.js"></script>
 </html>

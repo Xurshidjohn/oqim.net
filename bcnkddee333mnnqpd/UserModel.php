@@ -19,6 +19,12 @@
 			echo json_encode($result);
 		}
 
+		public function getUserByTokenWithOutJson($token) {
+			$result=$this->db->query("SELECT * FROM `users` WHERE `user_token` = '$token'");
+			$result = mysqli_fetch_assoc($result);
+			return $result;
+		}
+
 		public function getUser($input, $passwd)
 		{
 			$stmt = $this->db->prepare("SELECT * FROM `users` WHERE `user_email` = ? AND `user_pass` = ?");

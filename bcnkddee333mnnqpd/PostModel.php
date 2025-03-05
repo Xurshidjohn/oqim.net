@@ -9,7 +9,7 @@
 		}
 
 		public function DisplayAll() {
-			$sql = "SELECT * FROM `shortposts` ORDER BY RAND() LIMIT 10";
+			$sql = "SELECT * FROM shortposts ORDER BY (post_like * 0.7 + TIMESTAMPDIFF(HOUR, created_at, NOW()) * -0.3) DESC LIMIT 10;";
 			$result = $this->db->query($sql);
 			while($row = mysqli_fetch_assoc($result)) {
 				$data[] = $row;

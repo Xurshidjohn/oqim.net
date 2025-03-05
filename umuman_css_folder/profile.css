@@ -80,7 +80,7 @@ body {
 
 .display_flex-1 .txt_cont_and_block .texts_content .name_content {
     font-weight: 600;
-    height: 5vh;
+    height: 3vh;
     width: 20%;
 /*    justify-content: center;*/
     display: flex;
@@ -102,6 +102,8 @@ body {
 
 .txt_cont_and_block {
     width: 100%;
+    height: 15vh;
+    align-items: center;
 /*    border: solid 10px black;*/
     justify-content: flex-start;
     display: flex;
@@ -145,4 +147,68 @@ body {
 
 .button_ch_bio:active {
     background-color: #3b5998;
+}
+.change_username_input {
+    width: 90.5%;
+    padding: 5px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* O'sha paytda IE bu property'ni qo‘llamagan */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: border 0.2s ease-in-out;
+    outline: none;
+}
+
+.textarea_bio_change {
+    padding: 5px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* O'sha paytda IE bu property'ni qo‘llamagan */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: border 0.2s ease-in-out;
+    outline: none;
+}
+
+#edit_form {
+    border: solid 4px #3b5998;
+    display: flex;
+    display: none;
+}
+
+.st_section {
+    padding: 10px;
+}
+
+.nd_section {
+    padding: 10px;
+/*    display: flex;*/
+/*border: solid 1px black;*/
+}
+
+#select_menu {
+    width: 90.5%;
+    height: 4.5vh;
+    padding: 5px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* O'sha paytda IE bu property'ni qo‘llamagan */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: border 0.2s ease-in-out;
+    outline: none;
+}
+
+#save_changes {
+    border: none;
+    background-color: #3b5998;
+    color: #f2f2f2;
+    padding: 5px;
+    border-right: solid 1px #3b5998;
+    border-bottom: solid 1px #3b5998;
+}
+
+#save_changes:active {
+    background-color: #627aad;
 }
